@@ -8,7 +8,7 @@
       const urlParams = new URLSearchParams(queryString);
       const newDiv = document.createElement("div");
       for (const [key, value] of urlParams.entries()) {
-        const newKeyValue = document.createTextNode(key.append('=>').append(value))
+        const newKeyValue = document.createTextNode(key + '=>' + value)
         newDiv.appendChild(newKeyValue);
       }
     </script>
