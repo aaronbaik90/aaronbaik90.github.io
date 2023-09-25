@@ -6,9 +6,10 @@
     <script>
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
+      const newDiv = document.createElement("div");
       for (const [key, value] of urlParams.entries()) {
-        console.log(key);
-        console.log(value);
+        const newKeyValue = document.createTextNode(key.append('=>').append(value))
+        newDiv.appendChild(newKeyValue);
       }
     </script>
   </body>
