@@ -9,8 +9,7 @@
       const newDiv = document.createElement("div");
       for (const [key, value] of urlParams.entries()) {
         const newListItem = document.createElement("li");
-        const newKeyValue = document.createTextNode(key + '=>' + value)
-        newListItem.innerHTML = newKeyValue;
+        newListItem.innerHTML = key + '=>' + value;
         newDiv.appendChild(newListItem);
       }
       document.body.appendChild(newDiv);
