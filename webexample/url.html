@@ -8,7 +8,9 @@
       const urlParams = new URLSearchParams(queryString);
       const newDiv = document.createElement("div");
       for (const [key, value] of urlParams.entries()) {
+        const newListItem = document.createElement("li");
         const newKeyValue = document.createTextNode(key + '=>' + value)
+        newListItem.innerHTML = newKeyValue;
         newDiv.appendChild(newKeyValue);
       }
       document.body.appendChild(newDiv);
